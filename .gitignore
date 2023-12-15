@@ -1,0 +1,6 @@
+node_modules/**
+package-lock.json
+out/server/bundle.js
+out/client/bundle.js
+.tmp
+.*/
