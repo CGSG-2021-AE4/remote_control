@@ -16,7 +16,6 @@ export class Client {
       }
       console.log("Reg socket '" + login + "'");
       this.login = login;
-      console.log(res);
     });
   } /* End of 'setupClientRequests' function */
 

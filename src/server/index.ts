@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const server = http.Server(app);
 
-const serverAccessToken: string = "8888";
+const serverAccessToken: string = "12341234";
 const Clients: Set<Client> = new Set<Client>();
 
 const io = new Server(server);
@@ -24,6 +24,10 @@ io.on("connection", async (socket) => {
   console.log('New connection - ' + socket.id);
   
   Clients.add(new Client(socket, serverAccessToken));
+});
+
+app.get("/get", async ( req, res )=>{
+  res.send("aaaaaaaaa");
 });
 
 app.post("/send", async ( req, res )=>{
